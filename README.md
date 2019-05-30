@@ -1,6 +1,6 @@
 # Scala CheatSheet
 
-A "complete" Cheat-Sheet for scala. Under development. Click on watch to keep you informed of updates. Designed for people who are already familiar with the Scala programming language, for small reminders.
+A Cheat-Sheet for Scala made by an amateur. Under development. Click on watch to keep you informed of updates. Designed for people who are already familiar with the Scala programming language, for small reminders.
 
 ## Getting Started
 
