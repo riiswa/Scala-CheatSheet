@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>ScalaCheatSheet</title>
+<title>scala_cheatsheet</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13102,7 +13102,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13130,7 +13130,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Scala-Cheat-Sheet">Scala Cheat Sheet<a class="anchor-link" href="#Scala-Cheat-Sheet">&#182;</a></h1><ul>
-<li>Author : Waris RADJI student at Université Paris XIII</li>
+<li>Author : Waris RADJI student at University of Paris XIII</li>
 <li>Source : <a href="https://www.amazon.fr/SCALA-Pas-%C3%A0-Gildas-M%C3%A9nier/dp/2340000092">https://www.amazon.fr/SCALA-Pas-%C3%A0-Gildas-M%C3%A9nier/dp/2340000092</a></li>
 </ul>
 
@@ -13141,7 +13141,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Scala-Cheat-Sheet" data-toc-modified-id="Scala-Cheat-Sheet-1">Scala Cheat Sheet</a></span><ul class="toc-item"><li><span><a href="#Scala-essentials" data-toc-modified-id="Scala-essentials-1.1">Scala essentials</a></span><ul class="toc-item"><li><span><a href="#Display-and-Strings" data-toc-modified-id="Display-and-Strings-1.1.1">Display and Strings</a></span><ul class="toc-item"><li><span><a href="#Blocks-and-expressions" data-toc-modified-id="Blocks-and-expressions-1.1.1.1">Blocks and expressions</a></span></li></ul></li><li><span><a href="#Method-definitions" data-toc-modified-id="Method-definitions-1.1.2">Method definitions</a></span></li><li><span><a href="#Conditional" data-toc-modified-id="Conditional-1.1.3">Conditional</a></span></li><li><span><a href="#Pattern-matching" data-toc-modified-id="Pattern-matching-1.1.4">Pattern matching</a></span></li><li><span><a href="#Exceptions" data-toc-modified-id="Exceptions-1.1.5">Exceptions</a></span></li><li><span><a href="#Parametric-type" data-toc-modified-id="Parametric-type-1.1.6">Parametric type</a></span></li></ul></li><li><span><a href="#Object-oriented-programming" data-toc-modified-id="Object-oriented-programming-1.2">Object oriented programming</a></span><ul class="toc-item"><li><span><a href="#General-hierarchy-of-classes-/-traits-/-objects" data-toc-modified-id="General-hierarchy-of-classes-/-traits-/-objects-1.2.1">General hierarchy of classes / traits / objects</a></span></li><li><span><a href="#object" data-toc-modified-id="object-1.2.2">object</a></span></li><li><span><a href="#class" data-toc-modified-id="class-1.2.3">class</a></span></li></ul></li><li><span><a href="#Arrays" data-toc-modified-id="Arrays-1.3">Arrays</a></span><ul class="toc-item"><li><span><a href="#Declaration-of-array" data-toc-modified-id="Declaration-of-array-1.3.1">Declaration of array</a></span></li><li><span><a href="#Access-to-the-elements" data-toc-modified-id="Access-to-the-elements-1.3.2">Access to the elements</a></span></li><li><span><a href="#Iteration-on-the-elements-of-an-array" data-toc-modified-id="Iteration-on-the-elements-of-an-array-1.3.3">Iteration on the elements of an array</a></span></li><li><span><a href="#Creating-an-array-by-transformation" data-toc-modified-id="Creating-an-array-by-transformation-1.3.4">Creating an array by transformation</a></span><ul class="toc-item"><li><span><a href="#for/yield" data-toc-modified-id="for/yield-1.3.4.1">for/yield</a></span></li><li><span><a href="#filter" data-toc-modified-id="filter-1.3.4.2">filter</a></span></li><li><span><a href="#map" data-toc-modified-id="map-1.3.4.3">map</a></span></li><li><span><a href="#sortWith" data-toc-modified-id="sortWith-1.3.4.4">sortWith</a></span></li><li><span><a href="#reduce" data-toc-modified-id="reduce-1.3.4.5">reduce</a></span></li></ul></li><li><span><a href="#Arrays-with-a-variable-size" data-toc-modified-id="Arrays-with-a-variable-size-1.3.5">Arrays with a variable size</a></span></li></ul></li><li><span><a href="#Main-collections" data-toc-modified-id="Main-collections-1.4">Main collections</a></span><ul class="toc-item"><li><span><a href="#Principles" data-toc-modified-id="Principles-1.4.1">Principles</a></span></li><li><span><a href="#Tuples" data-toc-modified-id="Tuples-1.4.2">Tuples</a></span></li><li><span><a href="#Map" data-toc-modified-id="Map-1.4.3">Map</a></span><ul class="toc-item"><li><span><a href="#Map-implementations" data-toc-modified-id="Map-implementations-1.4.3.1">Map implementations</a></span></li></ul></li><li><span><a href="#Option" data-toc-modified-id="Option-1.4.4">Option</a></span></li><li><span><a href="#Either" data-toc-modified-id="Either-1.4.5">Either</a></span></li><li><span><a href="#Lists" data-toc-modified-id="Lists-1.4.6">Lists</a></span></li><li><span><a href="#Set" data-toc-modified-id="Set-1.4.7">Set</a></span><ul class="toc-item"><li><span><a href="#Set-Implementations" data-toc-modified-id="Set-Implementations-1.4.7.1">Set Implementations</a></span></li></ul></li><li><span><a href="#Vector" data-toc-modified-id="Vector-1.4.8">Vector</a></span></li><li><span><a href="#Stack" data-toc-modified-id="Stack-1.4.9">Stack</a></span></li><li><span><a href="#Queue" data-toc-modified-id="Queue-1.4.10">Queue</a></span></li><li><span><a href="#Range" data-toc-modified-id="Range-1.4.11">Range</a></span></li><li><span><a href="#Streams" data-toc-modified-id="Streams-1.4.12">Streams</a></span></li></ul></li><li><span><a href="#Collections-in-detail" data-toc-modified-id="Collections-in-detail-1.5">Collections in detail</a></span><ul class="toc-item"><li><span><a href="#Traversable" data-toc-modified-id="Traversable-1.5.1">Traversable</a></span></li><li><span><a href="#Iterable" data-toc-modified-id="Iterable-1.5.2">Iterable</a></span></li><li><span><a href="#Seq" data-toc-modified-id="Seq-1.5.3">Seq</a></span></li><li><span><a href="#Usual-operations" data-toc-modified-id="Usual-operations-1.5.4">Usual operations</a></span><ul class="toc-item"><li><span><a href="#Add-/-remove-an-element" data-toc-modified-id="Add-/-remove-an-element-1.5.4.1">Add / remove an element</a></span></li><li><span><a href="#Update" data-toc-modified-id="Update-1.5.4.2">Update</a></span></li><li><span><a href="#Assemblist-operations" data-toc-modified-id="Assemblist-operations-1.5.4.3">Assemblist operations</a></span></li><li><span><a href="#Cast" data-toc-modified-id="Cast-1.5.4.4">Cast</a></span></li><li><span><a href="#Operations-of-Iterables" data-toc-modified-id="Operations-of-Iterables-1.5.4.5">Operations of Iterables</a></span></li><li><span><a href="#Selection-and-cutting" data-toc-modified-id="Selection-and-cutting-1.5.4.6">Selection and cutting</a></span></li><li><span><a href="#Transformation-of-a-collection" data-toc-modified-id="Transformation-of-a-collection-1.5.4.7">Transformation of a collection</a></span></li></ul></li></ul></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Scala-Cheat-Sheet" data-toc-modified-id="Scala-Cheat-Sheet-1">Scala Cheat Sheet</a></span><ul class="toc-item"><li><span><a href="#Scala-essentials" data-toc-modified-id="Scala-essentials-1.1">Scala essentials</a></span><ul class="toc-item"><li><span><a href="#Display-and-Strings" data-toc-modified-id="Display-and-Strings-1.1.1">Display and Strings</a></span><ul class="toc-item"><li><span><a href="#Blocks-and-expressions" data-toc-modified-id="Blocks-and-expressions-1.1.1.1">Blocks and expressions</a></span></li></ul></li><li><span><a href="#Method-definitions" data-toc-modified-id="Method-definitions-1.1.2">Method definitions</a></span></li><li><span><a href="#Conditional" data-toc-modified-id="Conditional-1.1.3">Conditional</a></span></li><li><span><a href="#Pattern-matching" data-toc-modified-id="Pattern-matching-1.1.4">Pattern matching</a></span></li><li><span><a href="#Exceptions" data-toc-modified-id="Exceptions-1.1.5">Exceptions</a></span></li><li><span><a href="#Parametric-type" data-toc-modified-id="Parametric-type-1.1.6">Parametric type</a></span></li></ul></li><li><span><a href="#Object-oriented-programming" data-toc-modified-id="Object-oriented-programming-1.2">Object oriented programming</a></span><ul class="toc-item"><li><span><a href="#General-hierarchy-of-classes-/-traits-/-objects" data-toc-modified-id="General-hierarchy-of-classes-/-traits-/-objects-1.2.1">General hierarchy of classes / traits / objects</a></span></li><li><span><a href="#object" data-toc-modified-id="object-1.2.2">object</a></span></li><li><span><a href="#class" data-toc-modified-id="class-1.2.3">class</a></span></li></ul></li><li><span><a href="#Arrays" data-toc-modified-id="Arrays-1.3">Arrays</a></span><ul class="toc-item"><li><span><a href="#Declaration-of-array" data-toc-modified-id="Declaration-of-array-1.3.1">Declaration of array</a></span></li><li><span><a href="#Access-to-the-elements" data-toc-modified-id="Access-to-the-elements-1.3.2">Access to the elements</a></span></li><li><span><a href="#Iteration-on-the-elements-of-an-array" data-toc-modified-id="Iteration-on-the-elements-of-an-array-1.3.3">Iteration on the elements of an array</a></span></li><li><span><a href="#Creating-an-array-by-transformation" data-toc-modified-id="Creating-an-array-by-transformation-1.3.4">Creating an array by transformation</a></span><ul class="toc-item"><li><span><a href="#for/yield" data-toc-modified-id="for/yield-1.3.4.1">for/yield</a></span></li><li><span><a href="#filter" data-toc-modified-id="filter-1.3.4.2">filter</a></span></li><li><span><a href="#map" data-toc-modified-id="map-1.3.4.3">map</a></span></li><li><span><a href="#sortWith" data-toc-modified-id="sortWith-1.3.4.4">sortWith</a></span></li><li><span><a href="#reduce" data-toc-modified-id="reduce-1.3.4.5">reduce</a></span></li></ul></li><li><span><a href="#Arrays-with-a-variable-size" data-toc-modified-id="Arrays-with-a-variable-size-1.3.5">Arrays with a variable size</a></span></li></ul></li><li><span><a href="#Main-collections" data-toc-modified-id="Main-collections-1.4">Main collections</a></span><ul class="toc-item"><li><span><a href="#Principles" data-toc-modified-id="Principles-1.4.1">Principles</a></span></li><li><span><a href="#Tuples" data-toc-modified-id="Tuples-1.4.2">Tuples</a></span></li><li><span><a href="#Map" data-toc-modified-id="Map-1.4.3">Map</a></span><ul class="toc-item"><li><span><a href="#Map-implementations" data-toc-modified-id="Map-implementations-1.4.3.1">Map implementations</a></span></li></ul></li><li><span><a href="#Option" data-toc-modified-id="Option-1.4.4">Option</a></span></li><li><span><a href="#Either" data-toc-modified-id="Either-1.4.5">Either</a></span></li><li><span><a href="#Lists" data-toc-modified-id="Lists-1.4.6">Lists</a></span></li><li><span><a href="#Set" data-toc-modified-id="Set-1.4.7">Set</a></span><ul class="toc-item"><li><span><a href="#Set-Implementations" data-toc-modified-id="Set-Implementations-1.4.7.1">Set Implementations</a></span></li></ul></li><li><span><a href="#Vector" data-toc-modified-id="Vector-1.4.8">Vector</a></span></li><li><span><a href="#Stack" data-toc-modified-id="Stack-1.4.9">Stack</a></span></li><li><span><a href="#Queue" data-toc-modified-id="Queue-1.4.10">Queue</a></span></li><li><span><a href="#Range" data-toc-modified-id="Range-1.4.11">Range</a></span></li><li><span><a href="#Streams" data-toc-modified-id="Streams-1.4.12">Streams</a></span></li></ul></li><li><span><a href="#Collections-in-detail" data-toc-modified-id="Collections-in-detail-1.5">Collections in detail</a></span><ul class="toc-item"><li><span><a href="#Traversable" data-toc-modified-id="Traversable-1.5.1">Traversable</a></span></li><li><span><a href="#Iterable" data-toc-modified-id="Iterable-1.5.2">Iterable</a></span></li><li><span><a href="#Seq" data-toc-modified-id="Seq-1.5.3">Seq</a></span></li><li><span><a href="#Usual-operations" data-toc-modified-id="Usual-operations-1.5.4">Usual operations</a></span><ul class="toc-item"><li><span><a href="#Add-/-remove-an-element" data-toc-modified-id="Add-/-remove-an-element-1.5.4.1">Add / remove an element</a></span></li><li><span><a href="#Update" data-toc-modified-id="Update-1.5.4.2">Update</a></span></li><li><span><a href="#Assemblist-operations" data-toc-modified-id="Assemblist-operations-1.5.4.3">Assemblist operations</a></span></li><li><span><a href="#Cast" data-toc-modified-id="Cast-1.5.4.4">Cast</a></span></li><li><span><a href="#Operations-of-Iterables" data-toc-modified-id="Operations-of-Iterables-1.5.4.5">Operations of Iterables</a></span></li><li><span><a href="#Selection-and-cutting" data-toc-modified-id="Selection-and-cutting-1.5.4.6">Selection and cutting</a></span></li><li><span><a href="#Transformation-of-a-collection" data-toc-modified-id="Transformation-of-a-collection-1.5.4.7">Transformation of a collection</a></span></li><li><span><a href="#Operations-of-Seq" data-toc-modified-id="Operations-of-Seq-1.5.4.8">Operations of Seq</a></span></li></ul></li><li><span><a href="#Parallel-collections" data-toc-modified-id="Parallel-collections-1.5.5">Parallel collections</a></span><ul class="toc-item"><li><span><a href="#par" data-toc-modified-id="par-1.5.5.1">par</a></span></li></ul></li><li><span><a href="#Lazy-view" data-toc-modified-id="Lazy-view-1.5.6">Lazy view</a></span></li></ul></li><li><span><a href="#Object-oriented-programming" data-toc-modified-id="Object-oriented-programming-1.6">Object oriented programming</a></span><ul class="toc-item"><li><span><a href="#Class-statement" data-toc-modified-id="Class-statement-1.6.1">Class statement</a></span></li><li><span><a href="#public,-private-and-protected-access" data-toc-modified-id="public,-private-and-protected-access-1.6.2">public, private and protected access</a></span><ul class="toc-item"><li><span><a href="#public" data-toc-modified-id="public-1.6.2.1">public</a></span></li><li><span><a href="#private" data-toc-modified-id="private-1.6.2.2">private</a></span></li><li><span><a href="#protected" data-toc-modified-id="protected-1.6.2.3">protected</a></span></li><li><span><a href="#Refine-the-scope-of-access" data-toc-modified-id="Refine-the-scope-of-access-1.6.2.4">Refine the scope of access</a></span></li></ul></li><li><span><a href="#Getters-and-Setters" data-toc-modified-id="Getters-and-Setters-1.6.3">Getters and Setters</a></span></li></ul></li></ul></li></ul></div>
 </div>
 </div>
 </div>
@@ -13792,7 +13792,7 @@ sum1: (v1: Int, v2: Int)Int
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>loose</pre>
+<pre>win</pre>
 </div>
 
 </div>
@@ -13835,7 +13835,7 @@ sum1: (v1: Int, v2: Int)Int
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>positive
+<pre>negative
 </pre>
 </div>
 </div>
@@ -13939,10 +13939,10 @@ sum1: (v1: Int, v2: Int)Int
 	at $line46.$eval$.$print$lzycompute(&lt;console&gt;:7)
 	at $line46.$eval$.$print(&lt;console&gt;:6)
 	at $line46.$eval.$print(&lt;console&gt;)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.call(IMain.scala:793)
 	at scala.tools.nsc.interpreter.IMain$Request.loadAndRun(IMain.scala:1054)
 	at scala.tools.nsc.interpreter.IMain$WrappedRequest$$anonfun$loadAndRunReq$1.apply(IMain.scala:645)
@@ -13955,8 +13955,8 @@ sum1: (v1: Int, v2: Int)Int
 	at com.twosigma.beakerx.scala.evaluator.ScalaEvaluatorGlue.evaluate(ScalaEvaluatorGlue.scala:121)
 	at com.twosigma.beakerx.scala.evaluator.ScalaCodeRunner.call(ScalaCodeRunner.java:46)
 	at com.twosigma.beakerx.scala.evaluator.ScalaCodeRunner.call(ScalaCodeRunner.java:29)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.lang.Thread.run(Thread.java:834)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 </pre>
 </div>
 </div>
@@ -14045,7 +14045,7 @@ sum1: (v1: Int, v2: Int)Int
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>scala.math.Ordering$Implicits$@61d25c2b</pre>
+<pre>scala.math.Ordering$Implicits$@948e099</pre>
 </div>
 
 </div>
@@ -14172,7 +14172,7 @@ sum1: (v1: Int, v2: Int)Int
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>$line54.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$Test$@3f9c19c3</pre>
+<pre>$line54.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$Test$@7b8bd735</pre>
 </div>
 
 </div>
@@ -14223,7 +14223,7 @@ sum1: (v1: Int, v2: Int)Int
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>$line55.$read$$iw$$iw$Money$@797ce733</pre>
+<pre>$line55.$read$$iw$$iw$Money$@654a39e3</pre>
 </div>
 
 </div>
@@ -15346,13 +15346,13 @@ Sunday
 
  
  
-<div id="34ae686e-4eef-4f21-9383-74917799d79e"></div>
+<div id="3e43d9a9-be37-4db3-87bf-0e07886b10b1"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#34ae686e-4eef-4f21-9383-74917799d79e');
+var element = $('#3e43d9a9-be37-4db3-87bf-0e07886b10b1');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "ec4b400f-e31d-48c2-a8c2-2406431713ad", "version_major": 2, "version_minor": 0}
+{"model_id": "0ac810cf-1454-435a-b9a9-a0e3f9467b1e", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -15613,13 +15613,13 @@ var element = $('#34ae686e-4eef-4f21-9383-74917799d79e');
 
  
  
-<div id="7b9d66d3-b930-4c28-8060-5a85de1629c0"></div>
+<div id="6cdc6e5c-ddd1-4110-b425-92a4e0e0f871"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#7b9d66d3-b930-4c28-8060-5a85de1629c0');
+var element = $('#6cdc6e5c-ddd1-4110-b425-92a4e0e0f871');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "08d37501-86b3-4f79-885c-00efe6f41701", "version_major": 2, "version_minor": 0}
+{"model_id": "5438c75f-581c-4f7d-b23c-4818b04dc786", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -17247,7 +17247,7 @@ var element = $('#7b9d66d3-b930-4c28-8060-5a85de1629c0');
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>q</pre>
+<pre>j</pre>
 </div>
 
 </div>
@@ -17765,7 +17765,7 @@ var element = $('#7b9d66d3-b930-4c28-8060-5a85de1629c0');
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-Scala"><pre><span></span><span class="k">val</span> <span class="n">collec</span> <span class="k">=</span> <span class="mi">1</span> <span class="n">to</span> <span class="mi">100</span> <span class="n">by</span> <span class="mi">8</span>
-<span class="n">collec</span><span class="o">.</span><span class="n">to</span><span class="o">[</span><span class="kt">List</span><span class="o">]</span> <span class="c1">// de manière générale</span>
+<span class="n">collec</span><span class="o">.</span><span class="n">to</span><span class="o">[</span><span class="kt">List</span><span class="o">]</span> <span class="c1">// in general</span>
 </pre></div>
 
     </div>
@@ -19085,13 +19085,13 @@ var element = $('#7b9d66d3-b930-4c28-8060-5a85de1629c0');
 
  
  
-<div id="588c85fd-fd51-449a-a6a0-179a705926d1"></div>
+<div id="cdbe02cf-9be1-4b30-8a34-1befdd2d9f4e"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#588c85fd-fd51-449a-a6a0-179a705926d1');
+var element = $('#cdbe02cf-9be1-4b30-8a34-1befdd2d9f4e');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "31033d10-2ebc-4f71-8093-fb4e8cc13d87", "version_major": 2, "version_minor": 0}
+{"model_id": "43f65849-5bbf-421d-9120-fade8a0bcdad", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -19187,7 +19187,7 @@ var element = $('#588c85fd-fd51-449a-a6a0-179a705926d1');
 <div class="prompt input_prompt">In&nbsp;[158]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Scala"><pre><span></span><span class="s">&quot;abcde&quot;</span><span class="o">.</span><span class="n">zipAll</span><span class="o">(</span><span class="mf">1.</span><span class="n">to</span><span class="o">(</span><span class="mi">2</span><span class="o">),</span> <span class="s">&quot;*&quot;</span><span class="o">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="c1">// valeur par défaut à gauche et à droite</span>
+<div class=" highlight hl-Scala"><pre><span></span><span class="s">&quot;abcde&quot;</span><span class="o">.</span><span class="n">zipAll</span><span class="o">(</span><span class="mf">1.</span><span class="n">to</span><span class="o">(</span><span class="mi">2</span><span class="o">),</span> <span class="s">&quot;*&quot;</span><span class="o">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="c1">// with default value on the left and right</span>
 </pre></div>
 
     </div>
@@ -19281,15 +19281,1364 @@ var element = $('#588c85fd-fd51-449a-a6a0-179a705926d1');
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Operations-of-Seq">Operations of Seq<a class="anchor-link" href="#Operations-of-Seq">&#182;</a></h4>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[161]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Scala"><pre><span></span>
+<div class=" highlight hl-Scala"><pre><span></span><span class="k">val</span> <span class="n">s</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="o">-</span><span class="mi">3</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">8</span><span class="o">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[161]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[5, 6, 2, 8, -3, 0, 2, 8]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[162]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">indexOf</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[162]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[163]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">lastIndexOf</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[163]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[164]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">indexOfSlice</span><span class="o">(</span><span class="nc">Seq</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">8</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[164]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[165]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">lastIndexOfSlice</span><span class="o">(</span><span class="nc">Seq</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">8</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[165]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[166]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">indexWhere</span><span class="o">(</span><span class="k">_</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[166]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[167]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">prefixLength</span><span class="o">(</span><span class="k">_</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[167]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[168]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">segmentLength</span><span class="o">(</span><span class="k">_</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">3</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[168]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[169]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">contains</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[169]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[170]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">containsSlice</span><span class="o">(</span><span class="nc">Seq</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="o">-</span><span class="mi">3</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[170]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[171]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">startsWith</span><span class="o">(</span><span class="nc">Seq</span><span class="o">(</span><span class="mi">0</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[171]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[172]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">endsWith</span><span class="o">(</span><span class="nc">Seq</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">8</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[172]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[173]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">reverse</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[173]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[8, 2, 0, -3, 8, 2, 6, 5]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[174]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">intersect</span><span class="o">(</span><span class="nc">Seq</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">3</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[174]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[8]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[175]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">diff</span><span class="o">(</span><span class="nc">Seq</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">2</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[175]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[5, 6, -3, 0, 2, 8]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[176]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">slice</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">4</span><span class="o">).</span><span class="n">permutations</span><span class="o">.</span><span class="n">toList</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[176]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[List(5, 6, 2, 8), List(5, 6, 8, 2), List(5, 2, 6, 8), List(5, 2, 8, 6), List(5, 8, 6, 2), List(5, 8, 2, 6), List(6, 5, 2, 8), List(6, 5, 8, 2), List(6, 2, 5, 8), List(6, 2, 8, 5), List(6, 8, 5, 2), List(6, 8, 2, 5), List(2, 5, 6, 8), List(2, 5, 8, 6), List(2, 6, 5, 8), List(2, 6, 8, 5), List(2, 8, 5, 6), List(2, 8, 6, 5), List(8, 5, 6, 2), List(8, 5, 2, 6), List(8, 6, 5, 2), List(8, 6, 2, 5), List(8, 2, 5, 6), List(8, 2, 6, 5)]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[177]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">slice</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">4</span><span class="o">).</span><span class="n">combinations</span><span class="o">(</span><span class="mi">2</span><span class="o">).</span><span class="n">toList</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[177]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[List(5, 6), List(5, 2), List(5, 8), List(6, 2), List(6, 8), List(2, 8)]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[178]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">sorted</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[178]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[-3, 0, 2, 2, 5, 6, 8, 8]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[179]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">sortWith</span><span class="o">(</span><span class="k">_</span> <span class="o">&gt;</span> <span class="k">_</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[179]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[8, 8, 6, 5, 2, 2, 0, -3]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[180]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">sortBy</span><span class="o">(</span><span class="k">_</span> <span class="o">-</span> <span class="n">scala</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="nc">Random</span><span class="o">.</span><span class="n">nextInt</span><span class="o">(</span><span class="mi">8</span><span class="o">))</span> <span class="c1">// transforms the collection before sorting</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[180]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[-3, 0, 5, 2, 6, 2, 8, 8]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Parallel-collections">Parallel collections<a class="anchor-link" href="#Parallel-collections">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="par">par<a class="anchor-link" href="#par">&#182;</a></h4><p>To understand where a parallel collection can be useful, it helps to think about how they work. Conceptually, you can imagine a collection being split into different chunks; your algorithm is then applied to the chunks, and at the end of the operation, the different chunks are recombined. To be used only if the order is not important.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[181]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="mi">1</span> <span class="n">to</span> <span class="mi">100</span> <span class="n">par</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[181]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>ParRange(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[182]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="o">(</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">100</span> <span class="n">par</span><span class="o">)</span> <span class="n">seq</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[182]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[183]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="k">val</span> <span class="n">start</span> <span class="k">=</span> <span class="nc">System</span><span class="o">.</span><span class="n">nanoTime</span>
+
+<span class="k">val</span> <span class="n">r</span> <span class="k">=</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">1000000</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="n">i</span> <span class="k">&lt;-</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">100</span><span class="o">)</span> <span class="o">{</span><span class="k">val</span> <span class="n">cpt</span> <span class="k">=</span> <span class="n">r</span><span class="o">.</span><span class="n">count</span><span class="o">(</span><span class="k">_</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)}</span>
+<span class="s">s&quot;</span><span class="si">${</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="n">nanoTime</span> <span class="o">-</span> <span class="n">start</span><span class="o">)</span> <span class="o">/</span> <span class="mi">1000</span><span class="si">}</span><span class="s">ms&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[183]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1105386ms</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[184]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="k">val</span> <span class="n">start</span> <span class="k">=</span> <span class="nc">System</span><span class="o">.</span><span class="n">nanoTime</span>
+
+<span class="k">val</span> <span class="n">r</span> <span class="k">=</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">1000000</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="n">i</span> <span class="k">&lt;-</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">100</span><span class="o">)</span> <span class="o">{</span><span class="k">val</span> <span class="n">cpt</span> <span class="k">=</span> <span class="n">r</span><span class="o">.</span><span class="n">par</span><span class="o">.</span><span class="n">count</span><span class="o">(</span><span class="k">_</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)}</span>
+<span class="s">s&quot;</span><span class="si">${</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="n">nanoTime</span> <span class="o">-</span> <span class="n">start</span><span class="o">)</span> <span class="o">/</span> <span class="mi">1000</span><span class="si">}</span><span class="s">ms&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[184]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>303657ms</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Lazy-view">Lazy view<a class="anchor-link" href="#Lazy-view">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[185]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="k">val</span> <span class="n">v</span> <span class="k">=</span> <span class="o">(</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">5</span><span class="o">).</span><span class="n">view</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="k">_</span> <span class="o">*</span> <span class="mi">3</span><span class="o">)</span>
+<span class="n">println</span><span class="o">(</span><span class="n">v</span><span class="o">)</span> <span class="c1">// nothing is evaluated</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>SeqViewM(...)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[185]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>null</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[186]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">println</span><span class="o">(</span><span class="n">v</span><span class="o">(</span><span class="mi">3</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>12
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[187]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">println</span><span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="n">force</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Vector(3, 6, 9, 12, 15)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Object-oriented-programming">Object oriented programming<a class="anchor-link" href="#Object-oriented-programming">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Class-statement">Class statement<a class="anchor-link" href="#Class-statement">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[188]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="k">class</span> <span class="nc">Money</span><span class="o">(</span><span class="n">startMoney</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="k">this</span><span class="o">()</span> <span class="k">=</span> <span class="k">this</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="c1">// builder</span>
+    <span class="k">private</span> <span class="k">var</span> <span class="n">contain</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">def</span> <span class="o">+=(</span><span class="n">money</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">contain</span> <span class="o">+=</span> <span class="n">money</span>
+    <span class="k">def</span> <span class="n">empty</span> <span class="k">=</span> <span class="o">{</span><span class="k">val</span> <span class="n">solde</span> <span class="k">=</span> <span class="n">contain</span><span class="o">;</span> <span class="n">contain</span> <span class="k">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">solde</span><span class="o">}</span>
+    <span class="k">def</span> <span class="n">howMany</span> <span class="k">=</span> <span class="n">contain</span>
+    <span class="k">override</span> <span class="k">def</span> <span class="n">toString</span> <span class="k">=</span> <span class="n">contain</span><span class="o">.</span><span class="n">toString</span>
+<span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[188]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined class Money
+warning: previously defined object Money is not a companion to class Money.
+Companions must be defined together; you may wish to use :paste mode for this.
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="public,-private-and-protected-access">public, private and protected access<a class="anchor-link" href="#public,-private-and-protected-access">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="public">public<a class="anchor-link" href="#public">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[189]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="k">class</span> <span class="nc">ClassA</span><span class="o">{</span> <span class="c1">// without indication the methods and variables are by default public</span>
+    <span class="k">val</span> <span class="n">bar</span> <span class="k">=</span> <span class="s">&quot;foo&quot;</span>
+    <span class="k">def</span> <span class="n">foo</span> <span class="k">=</span> <span class="s">&quot;bar&quot;</span>
+<span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[189]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined class ClassA
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="private">private<a class="anchor-link" href="#private">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[190]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="k">class</span> <span class="nc">ClassA</span> <span class="o">{</span><span class="k">private</span> <span class="k">val</span> <span class="n">foo</span> <span class="o">=</span><span class="s">&quot;bar&quot;</span><span class="o">}</span> <span class="c1">// access only for this</span>
+<span class="o">(</span><span class="k">new</span> <span class="nc">ClassA</span><span class="o">).</span><span class="n">foo</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">&lt;console&gt;:16: error: value foo in class ClassA cannot be accessed in ClassA</span>
+<span class="ansi-red-intense-fg ansi-bold">       (new ClassA).foo</span>
+<span class="ansi-red-intense-fg ansi-bold">                    ^</span></pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="protected">protected<a class="anchor-link" href="#protected">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[191]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="k">class</span> <span class="nc">ClassA</span> <span class="o">{</span><span class="k">protected</span> <span class="k">def</span> <span class="n">hey</span><span class="o">(</span><span class="n">s</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">=</span> <span class="n">println</span><span class="o">(</span><span class="s">s&quot;Hey </span><span class="si">$s</span><span class="s"> !&quot;</span><span class="o">)}</span> <span class="c1">// access for this and children</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[191]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined class ClassA
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[192]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="k">class</span> <span class="nc">ClassB</span> <span class="k">extends</span> <span class="nc">ClassA</span> <span class="o">{</span><span class="n">hey</span><span class="o">(</span><span class="s">&quot;John&quot;</span><span class="o">)}</span>
+<span class="k">new</span> <span class="nc">ClassB</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hey John !
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[192]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>$line221.$read$$iw$$iw$ClassB@51d8bce0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[193]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="k">class</span> <span class="nc">ClassC</span> <span class="o">{</span>
+    <span class="n">hey</span><span class="o">(</span><span class="s">&quot;John&quot;</span><span class="o">)</span>
+    <span class="o">(</span><span class="k">new</span> <span class="nc">ClassA</span><span class="o">).</span><span class="n">hey</span><span class="o">(</span><span class="s">&quot;John&quot;</span><span class="o">)</span>
+<span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">&lt;console&gt;:17: error: method hey in class ClassA cannot be accessed in ClassA</span>
+<span class="ansi-red-intense-fg ansi-bold"> Access to protected method hey not permitted because</span>
+<span class="ansi-red-intense-fg ansi-bold"> enclosing class ClassC is not a subclass of</span>
+<span class="ansi-red-intense-fg ansi-bold"> class ClassA where target is defined</span>
+<span class="ansi-red-intense-fg ansi-bold">       (new ClassA).hey(&#34;John&#34;)</span>
+<span class="ansi-red-intense-fg ansi-bold">                    ^</span></pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Refine-the-scope-of-access">Refine the scope of access<a class="anchor-link" href="#Refine-the-scope-of-access">&#182;</a></h4><p>Specified a restriction limit that can be <code>this</code>, a <code>package</code>, a <code>class</code> or an <code>object</code> : <code>private[limit]</code> or <code>protected[limit]</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Getters-and-Setters">Getters and Setters<a class="anchor-link" href="#Getters-and-Setters">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[194]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="k">class</span> <span class="nc">Money</span> <span class="o">{</span><span class="k">var</span> <span class="n">amount</span> <span class="k">=</span> <span class="mi">0</span><span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[194]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined class Money
+warning: previously defined object Money is not a companion to class Money.
+Companions must be defined together; you may wish to use :paste mode for this.
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[195]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="k">val</span> <span class="n">money</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Money</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[195]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>$line223.$read$$iw$$iw$Money@75f961eb</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[196]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">money</span><span class="o">.</span><span class="n">amount</span> <span class="k">=</span> <span class="mi">100</span> <span class="c1">//setter</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[196]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>100</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[197]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Scala"><pre><span></span><span class="n">money</span><span class="o">.</span><span class="n">amount</span> <span class="c1">//getter</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[197]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>100</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
