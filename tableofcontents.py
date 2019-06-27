@@ -1,1 +1,0 @@
-print(input("Entry: ").replace("#", "https://riiswa.github.io/Scala-CheatSheet/#"))
