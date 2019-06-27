@@ -16,3 +16,13 @@ You can read the Cheat-Sheet by accessing this link : https://riiswa.github.io/S
 ## How to contribute
 
 Install `beakerx`, edit `scala_cheatsheet.ipynb` and Pull Requests.
+
+## Expected
+
+- Pattern Matching
+- Parametric types
+- XML
+- Future and Promise
+- Akka actors
+- Delimited continuations
+
